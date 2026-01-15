@@ -21,4 +21,4 @@ dependencies = [
 Homepage = "https://github.com/NuCoreAI/hebcal_provider"
 
 [tool.setuptools]
-py-modules = ["hebcal_provider", "prompts"]
+py_modules = ["hebcal_provider", "prompts"]
