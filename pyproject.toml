@@ -1,25 +1,23 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "nucore_hebcal_provider"
-version = "1.0.0"
-description = "Jewish Calendar provider for NuCore using Hebcal"
+name = "nucore-ai"
+version = "1.1.5"
+description = "Lightweight library for command/control/optimization/automation of smart home devices using LLMs"
 readme = "README.md"
-requires-python = ">=3.10"
 license = "MIT"
 authors = [
-    { name="Michel Kohanim", email="michel@universal-devices.com" }
+ { name="Michel Kohanim", email="michel@universal-devices.com" },
+ { name="P.A. SCHEMBRI", email="pa.schembri@advanced-stack.com" }
 ]
 dependencies = [
-    "aiohttp>=3.8.0",
-    "nucore_holiday_provider>1.0.0"
+"aiohttp>=3.8.0",
+"nucore_holiday_provider>=1.0.0"
 ]
-
-[project.optional-dependencies]
-dev = ["pytest", "pytest-asyncio"]
+urls = { "Homepage" = "https://github.com/NuCoreAI/hebcal_provider" }
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["hebcal" ]
+packages = ["assistant", "prompts", "config", "rag", "nucore", "server", "iox" ]
