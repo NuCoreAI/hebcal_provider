@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,16 +7,18 @@ name = "nucore_hebcal_provider"
 version = "1.0.0"
 description = "Hebrew Calendar Provider for NuCore"
 readme = "README.md"
-license = "MIT"
+requires-python = ">=3.10"
+license = {text = "MIT"}
 authors = [
- { name="Michel Kohanim", email="michel@universal-devices.com" }
+    {name = "Michel Kohanim", email = "michel@universal-devices.com"}
 ]
 dependencies = [
-"aiohttp>=3.8.0",
-"nucore_holiday_provider>=1.0.0"
+    "aiohttp>=3.8.0",
+    "nucore_holiday_provider>=1.0.0"
 ]
-urls = { "Homepage" = "https://github.com/NuCoreAI/hebcal_provider" }
+
+[project.urls]
+Homepage = "https://github.com/NuCoreAI/hebcal_provider"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
-packages = ["hebcal"  ]
+py-modules = ["hebcal_provider", "prompts"]
