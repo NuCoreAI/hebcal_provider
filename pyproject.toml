@@ -21,5 +21,4 @@ dependencies = [
 dev = ["pytest", "pytest-asyncio"]
 
 [tool.setuptools]
-package-dir = {"" = "."}
-packages = ["prompts"]
+py-modules = ["hebcal_provider", "prompts"]
