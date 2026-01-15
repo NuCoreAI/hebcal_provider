@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nucore_hebcal_provider"
+version = "1.0.0"
+description = "Jewish Calendar provider for NuCore using Hebcal"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name="Michel Kohanim", email="michel@universal-devices.com" }
+]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "nucore_holiday_provider>1.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
