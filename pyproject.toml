@@ -19,3 +19,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["prompts"]
